@@ -60,7 +60,7 @@ const Sermons = () => {
               {/* Placeholder Overlay */}
               <div className="absolute inset-0 bg-zinc-900/80"></div>
               <Image 
-                src="/Gallery 1.jpeg"
+                src="/hero.png"
                 alt="Church worship"
                 fill
                 className="object-cover opacity-50 transition-transform duration-500 group-hover:scale-105"

@@ -2,7 +2,6 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Sermons from "@/components/Sermons";
 import { motion } from "framer-motion";
 import { PlayCircle, Download, Share2, Calendar } from "lucide-react";
 import Image from "next/image";
@@ -16,7 +15,7 @@ export default function SermonsPage() {
       date: "May 19, 2024",
       duration: "52 minutes",
       views: "1.2K",
-      image: "/sermon1.jpg"
+      image: "/hero.png"
     },
     {
       title: "Walking in Faith",
@@ -24,7 +23,7 @@ export default function SermonsPage() {
       date: "May 12, 2024",
       duration: "45 minutes",
       views: "890",
-      image: "/sermon2.jpg"
+      image: "/hero.png"
     },
     {
       title: "The Power of Prayer",
@@ -32,7 +31,7 @@ export default function SermonsPage() {
       date: "May 5, 2024",
       duration: "48 minutes",
       views: "2.1K",
-      image: "/sermon3.jpg"
+      image: "/hero.png"
     },
     {
       title: "Triumph Over Adversity",
@@ -40,7 +39,7 @@ export default function SermonsPage() {
       date: "April 28, 2024",
       duration: "56 minutes",
       views: "1.8K",
-      image: "/sermon4.jpg"
+      image: "/hero.png"
     },
     {
       title: "God's Faithfulness",
@@ -48,7 +47,7 @@ export default function SermonsPage() {
       date: "April 21, 2024",
       duration: "50 minutes",
       views: "1.5K",
-      image: "/sermon5.jpg"
+      image: "/hero.png"
     },
     {
       title: "Living a Purpose-Driven Life",
@@ -56,7 +55,7 @@ export default function SermonsPage() {
       date: "April 14, 2024",
       duration: "54 minutes",
       views: "2.3K",
-      image: "/sermon6.jpg"
+      image: "/hero.png"
     }
   ];
 
