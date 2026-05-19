@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUp, Globe, Mail, Phone } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -9,12 +10,17 @@ const Footer = () => {
           
           <div className="space-y-6">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1">
-                <div className="w-full h-full bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm">RCCG</div>
+              <div className="relative w-12 h-12 bg-white rounded-full overflow-hidden p-0.5 shadow-md">
+                <Image
+                  src="/RCCG LOGO.jpeg"
+                  alt="RCCG Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="text-white font-serif font-bold text-xl leading-none">Praise Pavilion</span>
-                <span className="text-secondary text-[10px] uppercase tracking-widest font-sans">Zonal Headquarters</span>
+                <span className="text-white font-serif font-bold text-xl leading-none">Praise Pavilion Parish</span>
+                <span className="text-secondary text-[10px] uppercase tracking-widest font-sans font-bold mt-1">Zonal Headquarters</span>
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed">
@@ -36,10 +42,10 @@ const Footer = () => {
           <div>
             <h4 className="text-secondary font-bold uppercase tracking-widest mb-6">Quick Links</h4>
             <ul className="space-y-4 text-white/70">
-              <li><Link href="#" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="#activities" className="hover:text-white transition-colors">Weekly Activities</Link></li>
-              <li><Link href="#vision" className="hover:text-white transition-colors">Vision 2032</Link></li>
-              <li><Link href="#sermons" className="hover:text-white transition-colors">Latest Sermons</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/activities" className="hover:text-white transition-colors">Weekly Activities</Link></li>
+              <li><Link href="/sermons" className="hover:text-white transition-colors">Latest Sermons</Link></li>
+              <li><Link href="/gallery" className="hover:text-white transition-colors">Gallery</Link></li>
             </ul>
           </div>
 
@@ -71,7 +77,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center text-white/40 text-sm">
-          <p>© 2026 RCCG Praise Pavilion. All Rights Reserved.</p>
+          <p>© 2026 RCCG Praise Pavilion Parish. All Rights Reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>

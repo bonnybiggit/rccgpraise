@@ -6,6 +6,7 @@ import Sermons from "@/components/Sermons";
 import { motion } from "framer-motion";
 import { PlayCircle, Download, Share2, Calendar } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SermonsPage() {
   const sermonsLibrary = [
@@ -108,21 +109,41 @@ export default function SermonsPage() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {mediaTypes.map((media, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center hover:scale-105"
-              >
-                <div className="text-5xl mb-4">{media.icon}</div>
-                <h3 className="text-xl font-bold text-primary mb-2">{media.title}</h3>
-                <p className="text-3xl font-bold text-secondary mb-3">{media.count}</p>
-                <p className="text-gray-600">{media.description}</p>
-              </motion.div>
-            ))}
+            {mediaTypes.map((media, index) => {
+              const content = (
+                <>
+                  <div className="text-5xl mb-4">{media.icon}</div>
+                  <h3 className="text-xl font-bold text-primary mb-2">{media.title}</h3>
+                  <p className="text-3xl font-bold text-secondary mb-3">{media.count}</p>
+                  <p className="text-gray-600">{media.description}</p>
+                </>
+              );
+
+              return media.title === "Gallery" ? (
+                <Link key={index} href="/gallery" className="block">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center hover:scale-105 h-full cursor-pointer"
+                  >
+                    {content}
+                  </motion.div>
+                </Link>
+              ) : (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center hover:scale-105 h-full"
+                >
+                  {content}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -47,7 +47,7 @@ const Vision2032 = ({ graphicImage }: { graphicImage: string }) => {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-secondary/30 aspect-square lg:aspect-auto lg:h-[600px]">
               <Image
                 src="/building.jpg"
-                alt="RCCG Praise Pavilion Building"
+                alt="RCCG Praise Pavilion Parish Building"
                 fill
                 className="object-cover"
               />

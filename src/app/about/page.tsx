@@ -143,28 +143,27 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600">Dedicated servants leading with vision and passion</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {[1, 2, 3].map((item) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="relative w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden shadow-lg bg-gray-300">
-                  <Image
-                    src="/pastor.png"
-                    alt={`Leader ${item}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <h3 className="text-2xl font-bold text-primary mb-2">Leader Name</h3>
-                <p className="text-gray-600 font-medium mb-3">Position Title</p>
-                <p className="text-gray-500">Dedicated to ministry and service to the glory of God</p>
-              </motion.div>
-            ))}
+          <div className="flex flex-col items-center justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center max-w-md bg-zinc-50 p-8 rounded-3xl border border-zinc-100 shadow-xl hover:shadow-2xl transition-all"
+            >
+              <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-lg border-4 border-secondary">
+                <Image
+                  src="/Pastor Pic.jpeg"
+                  alt="Pastor Segun Oluwasuyi"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-3xl font-bold text-primary mb-2">Pastor Segun Oluwasuyi</h3>
+              <p className="text-secondary font-bold uppercase tracking-wider text-sm mb-4">Pastor-In-Charge</p>
+              <p className="text-gray-600 leading-relaxed">
+                Dedicated to shepherd the flock with wisdom, integrity, and love, fostering spiritual growth and leading the church in divine acceleration.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { PlayCircle } from "lucide-react";
+import Link from "next/link";
 
 const Sermons = () => {
   return (
@@ -48,7 +49,7 @@ const Sermons = () => {
             <h4 className="text-primary font-bold tracking-widest uppercase mb-2">Media & Resources</h4>
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-8">Catch Up with Grace</h2>
             
-            <div className="relative aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl mb-8 group">
+            <Link href="/gallery" className="block relative aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl mb-8 group cursor-pointer">
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10">
                 <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <PlayCircle size={40} />
@@ -59,23 +60,23 @@ const Sermons = () => {
               {/* Placeholder Overlay */}
               <div className="absolute inset-0 bg-zinc-900/80"></div>
               <Image 
-                src="/hero.png"
+                src="/Gallery 1.jpeg"
                 alt="Church worship"
                 fill
-                className="object-cover opacity-30"
+                className="object-cover opacity-50 transition-transform duration-500 group-hover:scale-105"
               />
-            </div>
+            </Link>
 
             <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
-              <div className="bg-zinc-50 p-6 rounded-2xl flex items-center gap-4 hover:shadow-md transition-shadow cursor-pointer">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                   <PlayCircle size={24} />
+              <Link href="/gallery" className="bg-zinc-50 p-6 rounded-2xl flex items-center gap-4 hover:shadow-md transition-all cursor-pointer border border-transparent hover:border-primary/10">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg">
+                   🖼️
                 </div>
                 <div>
                   <h4 className="font-bold text-primary">Gallery</h4>
                   <p className="text-sm text-zinc-500">Browse our church moments</p>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
 

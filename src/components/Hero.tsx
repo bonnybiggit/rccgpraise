@@ -26,7 +26,7 @@ const Hero = ({ backgroundImage }: { backgroundImage: string }) => {
             transition={{ duration: 0.8 }}
           >
             <h4 className="text-secondary font-sans font-bold tracking-[0.2em] uppercase mb-4">
-              Welcome to RCCG Praise Pavilion
+              Welcome to RCCG Praise Pavilion Parish
             </h4>
             <h1 className="text-5xl md:text-7xl font-serif text-white leading-tight mb-6">
               A place of <span className="text-secondary italic">explosive growth</span> and soul winning.

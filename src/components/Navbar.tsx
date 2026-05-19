@@ -23,6 +23,7 @@ const Navbar = () => {
     { name: "About Us", href: "/about" },
     { name: "Activities", href: "/activities" },
     { name: "Sermons", href: "/sermons" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -36,14 +37,14 @@ const Navbar = () => {
         <Link href="/" className="flex items-center space-x-3">
           <div className="relative w-14 h-14 bg-white rounded-lg overflow-hidden shadow-md p-1">
              <Image 
-               src="/logo.jpg" 
-               alt="RCCG Praise Pavilion Logo" 
+               src="/RCCG LOGO.jpeg" 
+               alt="RCCG Praise Pavilion Parish Logo" 
                fill 
                className="object-contain"
              />
           </div>
           <div className="flex flex-col">
-            <span className="text-white font-serif font-bold text-xl leading-none">Praise Pavilion</span>
+            <span className="text-white font-serif font-bold text-xl leading-none">Praise Pavilion Parish</span>
             <span className="text-secondary text-[10px] uppercase tracking-widest font-sans font-bold mt-1">Zonal Headquarters</span>
           </div>
         </Link>
