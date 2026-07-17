@@ -10,12 +10,12 @@ const Hero = ({ backgroundImage }: { backgroundImage: string }) => {
       <div className="absolute inset-0 z-0">
         <Image
           src={backgroundImage}
-          alt="Church Sanctuary"
+          alt="Church Entrance"
           fill
-          className="object-cover"
+          className="object-cover object-top"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-primary/30"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

@@ -84,7 +84,7 @@ const LocationContact = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-primary text-xl">Phone</h4>
-                  <p className="text-zinc-500">+234 (0) 123 4567 890</p>
+                  <p className="text-zinc-500">+234 902 708 8871</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -93,7 +93,7 @@ const LocationContact = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-primary text-xl">Email</h4>
-                  <p className="text-zinc-500">info@rccgpraisepavilion.org</p>
+                  <p className="text-zinc-500">praisepavillionp@gmail.com</p>
                 </div>
               </div>
             </div>

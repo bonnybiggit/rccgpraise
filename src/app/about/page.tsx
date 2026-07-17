@@ -83,8 +83,8 @@ export default function AboutPage() {
               className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl"
             >
               <Image
-                src="/hero.png"
-                alt="Mission"
+                src="/entrance.jpeg"
+                alt="RCCG Praise Pavilion Parish Building Entrance"
                 fill
                 className="object-cover"
               />

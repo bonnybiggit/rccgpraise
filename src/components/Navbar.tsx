@@ -22,7 +22,6 @@ const Navbar = () => {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Activities", href: "/activities" },
-    { name: "Sermons", href: "/sermons" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
   ];
@@ -34,18 +33,15 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link href="/" className="flex items-center space-x-3">
-          <div className="relative w-14 h-14 bg-white rounded-lg overflow-hidden shadow-md p-1">
+        <Link href="/" className="flex items-center mr-4 md:mr-8 shrink-0 py-1">
+          <div className="w-[180px] sm:w-[210px] md:w-[245px] h-auto flex items-center justify-center">
              <Image 
-               src="/RCCG LOGO.jpeg" 
-               alt="RCCG Praise Pavilion Parish Logo" 
-               fill 
-               className="object-contain"
+                src="/church-logo-transparent.png" 
+                alt="RCCG Praise Pavilion Parish Logo" 
+                width={245}
+                height={85}
+                className="w-full h-auto object-contain filter drop-shadow-[0_0_1.5px_rgba(255,255,255,0.95)] drop-shadow-[0_0_3px_rgba(255,255,255,0.6)]"
              />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-white font-serif font-bold text-xl leading-none">Praise Pavilion Parish</span>
-            <span className="text-secondary text-[10px] uppercase tracking-widest font-sans font-bold mt-1">Zonal Headquarters</span>
           </div>
         </Link>
 

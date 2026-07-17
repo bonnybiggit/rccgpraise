@@ -3,12 +3,14 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LocationContact from "@/components/LocationContact";
-import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Phone, Mail, MapPin, Clock, Send, Plus, Minus } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 
 export default function ContactPage() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,14 +29,14 @@ export default function ContactPage() {
     {
       icon: <Phone className="w-8 h-8" />,
       title: "Phone",
-      details: ["+234 (0) 700 000 0000", "+234 (0) 800 111 1111"],
-      link: "tel:+2347000000000"
+      details: ["+234 902 708 8871"],
+      link: "tel:+2349027088871"
     },
     {
       icon: <Mail className="w-8 h-8" />,
       title: "Email",
-      details: ["info@praisepavillion.org", "contact@praisepavillion.org"],
-      link: "mailto:info@praisepavillion.org"
+      details: ["praisepavillionp@gmail.com"],
+      link: "mailto:praisepavillionp@gmail.com"
     },
     {
       icon: <Clock className="w-8 h-8" />,
@@ -230,11 +232,11 @@ export default function ContactPage() {
             <p className="text-xl text-gray-600">Find answers to common questions</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-3xl mx-auto space-y-4">
             {[
               {
                 q: "What are your service times?",
-                a: "We have services on Sundays at 8:00 AM and 10:15 AM, and Wednesday Bible study at 6:00 PM."
+                a: "We have services on Sundays at 8:00 AM, and Tuesday Digging Deep at 6:00 PM."
               },
               {
                 q: "Is everyone welcome at the parish?",
@@ -255,10 +257,34 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-lg"
+                className="bg-white rounded-2xl shadow-md overflow-hidden border border-primary/10"
               >
-                <h3 className="text-lg font-bold text-primary mb-4">{faq.q}</h3>
-                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                <button
+                  className="w-full flex items-center justify-between p-6 text-left group hover:bg-primary/5 transition-colors"
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                >
+                  <h3 className="text-lg font-bold text-primary pr-4">{faq.q}</h3>
+                  <div className="shrink-0 w-8 h-8 bg-primary/10 group-hover:bg-primary group-hover:text-white text-primary rounded-full flex items-center justify-center transition-all">
+                    {openFaq === index ? <Minus size={16} /> : <Plus size={16} />}
+                  </div>
+                </button>
+                <AnimatePresence initial={false}>
+                  {openFaq === index && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 pb-6">
+                        <div className="h-px bg-primary/10 mb-4" />
+                        <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </div>
