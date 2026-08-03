@@ -1,42 +1,58 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #002366;
-  --color-secondary: #D4AF37;
-  --color-accent: #B8860B;
-  
+  --color-primary: #1a2744;
+  --color-secondary: #c9a227;
+  --color-accent: #a07c10;
+  --color-brand-cream: #f5f0e8;
+  --color-brand-light: #f0f4fb;
+
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
 }
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --primary: #002366;
-  --secondary: #D4AF37;
+  --foreground: #1a2744;
+  --primary: #1a2744;
+  --secondary: #c9a227;
+  --accent: #a07c10;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
+  min-width: 320px;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
 }
 
+.container {
+  width: min(100%, 1200px);
+}
+
 .glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(26, 39, 68, 0.08);
 }
 
 .text-gold {

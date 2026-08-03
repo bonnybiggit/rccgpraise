@@ -7,7 +7,7 @@ const activities = [
   {
     day: "Tuesday",
     title: "Digging Deep",
-    time: "6:30 PM - 8:00 PM",
+    time: "6:00 PM - 7:00 PM",
     icon: <Sparkles className="text-secondary" />,
     desc: "In-depth Bible study and spiritual growth.",
   },
@@ -33,10 +33,10 @@ const activities = [
 
 const WeeklyActivities = () => {
   return (
-    <section id="activities" className="py-24 bg-zinc-50">
+    <section id="activities" className="py-24 bg-[#f7f9fc]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h4 className="text-primary font-bold tracking-widest uppercase mb-2">Our Schedule</h4>
+          <h4 className="text-secondary font-bold tracking-widest uppercase mb-2">Our Schedule</h4>
           <h2 className="text-4xl md:text-5xl font-serif text-primary">Weekly Activities</h2>
           <div className="w-20 h-1 bg-secondary mx-auto mt-4"></div>
         </div>
@@ -49,9 +49,9 @@ const WeeklyActivities = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-primary hover:border-secondary transition-all group"
+              className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-primary hover:border-secondary transition-all group hover:shadow-xl"
             >
-              <div className="mb-6 bg-primary/5 w-14 h-14 rounded-full flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
+              <div className="mb-6 bg-primary/8 w-14 h-14 rounded-full flex items-center justify-center group-hover:bg-secondary/15 transition-colors">
                 {item.icon}
               </div>
               <h3 className="text-2xl font-serif text-primary mb-2">{item.day}</h3>
@@ -85,15 +85,20 @@ const WeeklyActivities = () => {
             <h3 className="text-2xl font-serif mb-2">Special Monthly Services</h3>
             <p className="text-white/70">Don't miss our periodic empowerment sessions.</p>
           </div>
-          <div className="flex gap-8 mt-6 md:mt-0 relative z-10">
+          <div className="flex flex-col md:flex-row gap-6 mt-6 md:mt-0 relative z-10">
+            <div className="text-center">
+              <p className="text-secondary font-bold text-lg">First Day of Every Month</p>
+              <p className="text-xs uppercase tracking-tighter text-white/70">Command the Month - 6:00 AM - 7:00 AM</p>
+            </div>
+            <div className="w-px h-10 bg-white/20 hidden md:block"></div>
             <div className="text-center">
               <p className="text-secondary font-bold text-lg">Every 1st Sunday</p>
-              <p className="text-xs uppercase tracking-tighter">Combined Thanksgiving</p>
+              <p className="text-xs uppercase tracking-tighter text-white/70">Combined Thanksgiving</p>
             </div>
             <div className="w-px h-10 bg-white/20 hidden md:block"></div>
             <div className="text-center">
               <p className="text-secondary font-bold text-lg">Every 1st Friday</p>
-              <p className="text-xs uppercase tracking-tighter">Holy Ghost Service (@ Redemption Camp)</p>
+              <p className="text-xs uppercase tracking-tighter text-white/70">Holy Ghost Service (@ Redemption Camp)</p>
             </div>
           </div>
           {/* Background pattern */}

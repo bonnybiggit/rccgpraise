@@ -16,7 +16,7 @@ const Sermons = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-1/3 bg-zinc-50 rounded-3xl overflow-hidden shadow-2xl group"
+            className="w-full lg:w-1/3 bg-[#f7f9fc] rounded-3xl overflow-hidden shadow-xl group border border-primary/5"
           >
             <div className="relative h-[450px]">
               <Image
@@ -38,7 +38,7 @@ const Sermons = () => {
               </button>
             </div>
             <div className="p-8">
-              <button className="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors">
+              <button className="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-secondary hover:text-primary transition-colors">
                 <PlayCircle size={20} /> Watch Now
               </button>
             </div>
@@ -46,7 +46,7 @@ const Sermons = () => {
 
           {/* Media & Stream Section */}
           <div className="w-full lg:w-2/3">
-            <h4 className="text-primary font-bold tracking-widest uppercase mb-2">Media & Resources</h4>
+            <h4 className="text-secondary font-bold tracking-widest uppercase mb-2">Media & Resources</h4>
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-8">Catch Up with Grace</h2>
             
             <Link href="/gallery" className="block relative aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl mb-8 group cursor-pointer">
@@ -58,17 +58,17 @@ const Sermons = () => {
                 <p className="text-white/60">View our latest ministry moments</p>
               </div>
               {/* Placeholder Overlay */}
-              <div className="absolute inset-0 bg-zinc-900/80"></div>
+              <div className="absolute inset-0 bg-primary/80"></div>
               <Image 
                 src="/hero.png"
                 alt="Church worship"
                 fill
-                className="object-cover opacity-50 transition-transform duration-500 group-hover:scale-105"
+                className="object-cover opacity-40 transition-transform duration-500 group-hover:scale-105"
               />
             </Link>
 
             <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
-              <Link href="/gallery" className="bg-zinc-50 p-6 rounded-2xl flex items-center gap-4 hover:shadow-md transition-all cursor-pointer border border-transparent hover:border-primary/10">
+              <Link href="/gallery" className="bg-[#f7f9fc] p-6 rounded-2xl flex items-center gap-4 hover:shadow-md transition-all cursor-pointer border border-primary/8 hover:border-primary/20">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg">
                    🖼️
                 </div>

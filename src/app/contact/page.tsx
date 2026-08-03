@@ -236,7 +236,7 @@ export default function ContactPage() {
             {[
               {
                 q: "What are your service times?",
-                a: "We have services on Sundays at 8:00 AM, and Tuesday Digging Deep at 6:00 PM."
+                a: "We have services on Sundays at 8:00 AM, Tuesday Digging Deep at 6:00 PM, and Command the Month every first day of the month from 6:00 AM to 7:00 AM."
               },
               {
                 q: "Is everyone welcome at the parish?",

@@ -78,7 +78,7 @@ export default function EventsSlider() {
   }, []);
 
   return (
-    <section className="py-24 bg-zinc-50 overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -86,13 +86,15 @@ export default function EventsSlider() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
+          <h4 className="text-secondary font-bold tracking-widest uppercase mb-2">What's Coming</h4>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">Events</h2>
-          <p className="text-xl text-gray-600">Join us in our upcoming special programs and encounters</p>
+          <div className="w-20 h-1 bg-secondary mx-auto" />
+          <p className="text-xl text-zinc-500 mt-4">Join us in our upcoming special programs and encounters</p>
         </motion.div>
 
         <div className="relative max-w-5xl mx-auto h-[550px] md:h-[600px] flex items-center justify-center">
           {/* Main Slider Container */}
-          <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-white border border-zinc-100 flex flex-col md:flex-row">
+          <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-white border border-primary/8 flex flex-col md:flex-row">
             
             {/* Slide Animating Group */}
             <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -110,7 +112,7 @@ export default function EventsSlider() {
                 className="absolute inset-0 flex flex-col md:flex-row h-full w-full"
               >
                 {/* Image Section */}
-                <div className="relative w-full md:w-1/2 h-[300px] md:h-full bg-zinc-950 flex items-center justify-center p-4">
+                <div className="relative w-full md:w-1/2 h-[300px] md:h-full bg-primary/5 flex items-center justify-center p-4">
                   <div className="relative w-full h-full">
                     <Image
                       src={slides[currentIndex].image}
@@ -130,13 +132,13 @@ export default function EventsSlider() {
                   <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
                     {slides[currentIndex].title}
                   </h3>
-                  <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                  <p className="text-zinc-500 text-lg leading-relaxed mb-8">
                     {slides[currentIndex].tagline}
                   </p>
 
-                  <div className="space-y-4 border-t border-zinc-100 pt-6">
-                    <div className="flex items-center gap-4 text-gray-700">
-                      <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+                  <div className="space-y-4 border-t border-primary/8 pt-6">
+                    <div className="flex items-center gap-4 text-zinc-700">
+                      <div className="w-10 h-10 rounded-full bg-primary/8 flex items-center justify-center text-primary">
                         <Calendar size={18} />
                       </div>
                       <div>
@@ -145,8 +147,8 @@ export default function EventsSlider() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-4 text-gray-700">
-                      <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+                    <div className="flex items-center gap-4 text-zinc-700">
+                      <div className="w-10 h-10 rounded-full bg-primary/8 flex items-center justify-center text-primary">
                         <Clock size={18} />
                       </div>
                       <div>
@@ -155,8 +157,8 @@ export default function EventsSlider() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-4 text-gray-700">
-                      <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+                    <div className="flex items-center gap-4 text-zinc-700">
+                      <div className="w-10 h-10 rounded-full bg-primary/8 flex items-center justify-center text-primary">
                         <MapPin size={18} />
                       </div>
                       <div>
@@ -173,14 +175,14 @@ export default function EventsSlider() {
             <div className="absolute bottom-6 right-6 md:right-12 z-20 flex gap-3">
               <button
                 onClick={() => paginate(-1)}
-                className="w-12 h-12 rounded-full bg-primary hover:bg-primary/95 text-white flex items-center justify-center hover:scale-105 transition-all shadow-lg border border-white/10"
+                className="w-12 h-12 rounded-full bg-primary hover:bg-secondary text-white hover:text-primary flex items-center justify-center hover:scale-105 transition-all shadow-lg border border-white/10"
                 aria-label="Previous slide"
               >
                 <ChevronLeft size={24} />
               </button>
               <button
                 onClick={() => paginate(1)}
-                className="w-12 h-12 rounded-full bg-primary hover:bg-primary/95 text-white flex items-center justify-center hover:scale-105 transition-all shadow-lg border border-white/10"
+                className="w-12 h-12 rounded-full bg-primary hover:bg-secondary text-white hover:text-primary flex items-center justify-center hover:scale-105 transition-all shadow-lg border border-white/10"
                 aria-label="Next slide"
               >
                 <ChevronRight size={24} />
@@ -197,7 +199,7 @@ export default function EventsSlider() {
                     setCurrentIndex(index);
                   }}
                   className={`h-2.5 rounded-full transition-all duration-300 ${
-                    index === currentIndex ? "w-8 bg-primary" : "w-2.5 bg-zinc-300 hover:bg-zinc-400"
+                    index === currentIndex ? "w-8 bg-primary" : "w-2.5 bg-zinc-200 hover:bg-zinc-300"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

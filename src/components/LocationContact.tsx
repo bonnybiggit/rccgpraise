@@ -5,8 +5,14 @@ import { MapPin, Phone, Mail, Send } from "lucide-react";
 
 const LocationContact = () => {
   return (
-    <section id="contact" className="py-24 bg-zinc-50">
+    <section id="contact" className="py-24 bg-[#f7f9fc]">
       <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h4 className="text-secondary font-bold tracking-widest uppercase mb-2">Reach Us</h4>
+          <h2 className="text-4xl md:text-5xl font-serif text-primary">Get In Touch</h2>
+          <div className="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
           {/* Contact Form */}
@@ -14,9 +20,9 @@ const LocationContact = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white p-10 rounded-3xl shadow-2xl border border-zinc-100"
+            className="bg-white p-10 rounded-3xl shadow-xl border border-primary/8"
           >
-            <h2 className="text-4xl font-serif text-primary mb-2">Get In Touch</h2>
+            <h2 className="text-3xl font-serif text-primary mb-2">Send a Message</h2>
             <p className="text-zinc-500 mb-8">Send us your prayer requests or inquiries.</p>
             
             <form className="space-y-6">
@@ -25,7 +31,7 @@ const LocationContact = () => {
                   <label className="block text-sm font-bold text-primary mb-2">Full Name</label>
                   <input
                     type="text"
-                    className="w-full px-5 py-3 rounded-xl border border-zinc-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                    className="w-full px-5 py-3 rounded-xl border border-zinc-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all bg-white"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -33,14 +39,14 @@ const LocationContact = () => {
                   <label className="block text-sm font-bold text-primary mb-2">Email Address</label>
                   <input
                     type="email"
-                    className="w-full px-5 py-3 rounded-xl border border-zinc-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                    className="w-full px-5 py-3 rounded-xl border border-zinc-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all bg-white"
                     placeholder="Enter your email"
                   />
                 </div>
               </div>
               <div>
                 <label className="block text-sm font-bold text-primary mb-2">Subject</label>
-                <select className="w-full px-5 py-3 rounded-xl border border-zinc-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all">
+                <select className="w-full px-5 py-3 rounded-xl border border-zinc-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all bg-white">
                   <option>Prayer Request</option>
                   <option>Testimony</option>
                   <option>Counseling</option>
@@ -51,11 +57,11 @@ const LocationContact = () => {
                 <label className="block text-sm font-bold text-primary mb-2">Message</label>
                 <textarea
                   rows={4}
-                  className="w-full px-5 py-3 rounded-xl border border-zinc-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                  className="w-full px-5 py-3 rounded-xl border border-zinc-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all bg-white"
                   placeholder="How can we help you?"
                 ></textarea>
               </div>
-              <button className="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all transform hover:scale-[1.02] shadow-lg">
+              <button className="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-secondary hover:text-primary transition-all transform hover:scale-[1.02] shadow-lg">
                 <Send size={18} /> Send Message
               </button>
             </form>
@@ -70,7 +76,7 @@ const LocationContact = () => {
           >
             <div className="mb-10 space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center text-primary shrink-0">
+                <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center text-primary shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -79,7 +85,7 @@ const LocationContact = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center text-primary shrink-0">
+                <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center text-primary shrink-0">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -88,7 +94,7 @@ const LocationContact = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center text-primary shrink-0">
+                <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center text-primary shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
